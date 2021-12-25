@@ -1,7 +1,7 @@
 ---
 - name: Install filebeat
   become: true
-  yum:
+  apt:
     name: "/tmp/filebeat-{{ filebeat_version }}-amd64.deb"
     state: present
   notify: restart filebeat
