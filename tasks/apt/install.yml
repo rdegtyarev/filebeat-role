@@ -2,6 +2,6 @@
 - name: Install filebeat
   become: true
   apt:
-    name: "/tmp/filebeat-{{ filebeat_version }}-amd64.deb"
+    deb: "/tmp/filebeat-{{ filebeat_version }}-amd64.deb"
     state: present
   notify: restart filebeat
